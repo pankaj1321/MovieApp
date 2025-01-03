@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from "react"
 import "./Movie.css"
 import { useParams } from "react-router-dom"
-import Cards from "../../component/header/card/Card"
-
+import Card from "../../component/header/card/Card"
 const MovieList = () => {
     
     const [movieList, setMovieList] = useState([])
@@ -28,7 +27,7 @@ const MovieList = () => {
             <div className="list__cards">
                 {
                     movieList.map(movie => (
-                        <Cards key={movie.id} movie={movie} />
+                        <Card key={movie.id} movie={movie} />
                     ))
                 }
             </div>
